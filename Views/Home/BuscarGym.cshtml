@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "Buscar Gimnasio";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Buscar el Mejor Gimnasio por Barrio</h1>
+
+    <form method="post" action="/Home/BuscarGym">
+        <div class="form-group">
+            <label for="barrio">Selecciona un barrio:</label>
+            <select class="form-control" id="barrio" name="barrio" required>
+                @foreach (var gym in ViewBag.Gyms)
+                {
+                    <option value="@gym.Neighborhood">@gym.Neighborhood</option>
+                }
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Buscar</button>
+    </form>
+
+    @if (ViewBag.Gym != null)
+    {
+        <div class="mt-4">
+            <h3>@ViewBag.Gym.Name</h3>
+            <p>Dirección: @ViewBag.Gym.Address</p>
+            <a href="@ViewBag.Gym.GoogleMapsUrl" class="btn btn-info" target="_blank">Ver en Google Maps</a>
+        </div>
+    }
+</div>
