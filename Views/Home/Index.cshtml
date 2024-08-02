@@ -11,46 +11,43 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Bienvenido a GymBlog!</h1>
-    <p>Aprende todo sobre rutinas de gimnasio, planes de dieta y mucho más.</p>
-    <!-- Sección de Blog Posts -->
-    <div class="row">
-            @foreach (var post in ViewBag.BlogPosts)
-            {
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="@post.ImageUrl" class="card-img-top" alt="@post.Title">
-                        <div class="card-body">
-                            <h5 class="card-title">@post.Title</h5>
-                            <p class="card-text">@post.Description</p>
-                            <a href="@post.Url" class="btn btn-primary">Leer Más</a>
-                        </div>
-                    </div>
+    <h1 class="display-4">Bienvenido a Mi Blog de Gimnasio</h1>
+
+    <div class="blog-posts">
+        @foreach (var post in ViewBag.BlogPosts)
+        {
+            <div class="card mb-3 blog-card">
+                <img src="@post.ImageUrl" class="card-img-top" alt="@post.Title">
+                <div class="card-body">
+                    <h5 class="card-title">@post.Title</h5>
+                    <p class="card-text">@post.Description</p>
+                    <a href="@post.Url" class="btn btn-primary">Leer más</a>
                 </div>
+            </div>
         }
     </div>
-</div>
 
-<div class="text-center mt-5">
-    <h2>Calculadora de Fuerza</h2>
-    <form method="post" action="/Home/CalcularFuerza">
-        <div class="form-group">
-            <label for="peso">Peso levantado (kg):</label>
-            <input type="number" class="form-control" id="peso" name="peso" required>
-        </div>
-        <div class="form-group">
-            <label for="repeticiones">Número de repeticiones:</label>
-            <input type="number" class="form-control" id="repeticiones" name="repeticiones" required>
-        </div>
-        <button type="submit" class="btn btn-primary">Calcular</button>
-    </form>
+    <div class="force-calculator mt-5 p-3">
+        <h2>Calculador de Fuerza</h2>
+        <form method="post" action="/Home/CalcularFuerza">
+            <div class="form-group">
+                <label for="peso">Peso levantado (kg o lbs):</label>
+                <input type="number" class="form-control" id="peso" name="peso" required>
+            </div>
+            <div class="form-group">
+                <label for="repeticiones">Número de repeticiones:</label>
+                <input type="number" class="form-control" id="repeticiones" name="repeticiones" required>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Calcular</button>
+        </form>
 
-    @if (ViewBag.Resultado != null)
-    {
-        <div class="alert alert-success mt-3">
-            <strong>Resultado:</strong> Tu peso máximo para una repetición es de @ViewBag.Resultado kg.
-        </div>
-    }
+        @if (ViewBag.Resultado != null)
+        {
+            <div class="mt-3">
+                <h4>Resultado: @ViewBag.Resultado kg/lbs</h4>
+            </div>
+        }
+    </div>
 </div>
 </body>
 </html>

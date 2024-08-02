@@ -1,4 +1,67 @@
 body {
-      background: url('/images/fondo.jpeg') no-repeat center center fixed;
+    font-family: 'Roboto', sans-serif;
+    background: url('/images/fondo.jpeg') no-repeat center center fixed;
       background-size: cover;
-  }
+}
+
+.navbar {
+    width: 100%;
+    background-color: #28a745; /* Verde */
+    padding: 10px 0;
+}
+
+.nav-link {
+    color: #fff !important;
+}
+
+.navbar-brand {
+    color: #fff !important;
+}
+
+.navbar-toggler {
+    border-color: #fff;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.blog-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.blog-card:hover {
+    transform: scale(1.05);
+}
+
+.force-calculator {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.force-calculator:hover {
+    transform: scale(1.05);
+}
+
+.btn-primary {
+    background-color: #28a745;
+    border-color: #28a745;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+    transform: scale(1.1);
+}
+
+.card-title, .card-text, h2 {
+    font-size: calc(1rem + 1vw);
+}
+
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2rem;
+    }
+}

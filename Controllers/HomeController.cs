@@ -32,6 +32,7 @@ namespace GymBlog.Controllers
                     ImageUrl = "/images/Rutina.jpg",
                     Url = "/Home/CualEsMiRutina"
                 }
+                
             };
         }
 
@@ -39,21 +40,21 @@ namespace GymBlog.Controllers
         {
             return new List<Gym>
             {
-                new Gym
-                {
-                    Neighborhood = "Palermo",
-                    Name = "Gym Palermo",
-                    Address = "Calle Falsa 123, Palermo",
-                    GoogleMapsUrl = "https://maps.google.com/?q=Gym+Palermo"
-                },
-                new Gym
-                {
-                    Neighborhood = "Recoleta",
-                    Name = "Gym Recoleta",
-                    Address = "Calle Verdadera 456, Recoleta",
-                    GoogleMapsUrl = "https://maps.google.com/?q=Gym+Recoleta"
-                },
-                // Agregar más gimnasios aquí
+                new Gym { Name = "Gimnasio Central", Neighborhood = "Centro", Address = "Calle Principal 123", GImageUrl = "/images/gym_central.jpg" },
+                new Gym { Name = "Gimnasio Norte", Neighborhood = "Norte", Address = "Avenida Norte 456", GImageUrl = "/images/gym_norte.jpg" },
+                new Gym { Name = "Gimnasio Sur", Neighborhood = "Sur", Address = "Calle Sur 789", GImageUrl = "/images/gym_sur.jpg" },
+                new Gym { Name = "Gimnasio Este", Neighborhood = "Este", Address = "Avenida Este 101", GImageUrl = "/images/gym_este.jpg" },
+                new Gym { Name = "Gimnasio Oeste", Neighborhood = "Oeste", Address = "Calle Oeste 202", GImageUrl = "/images/gym_oeste.jpg" },
+                new Gym { Name = "Gimnasio San Miguel", Neighborhood = "San Miguel", Address = "Calle San Miguel 303", GImageUrl = "/images/gym_san_miguel.jpg" },
+                new Gym { Name = "Gimnasio Palermo", Neighborhood = "Palermo", Address = "Avenida Palermo 404", GImageUrl = "/images/gym_palermo.jpg" },
+                new Gym { Name = "Gimnasio Belgrano", Neighborhood = "Belgrano", Address = "Calle Belgrano 505", GImageUrl = "/images/gym_belgrano.jpg" },
+                new Gym { Name = "Gimnasio Recoleta", Neighborhood = "Recoleta", Address = "Avenida Recoleta 606", GImageUrl = "/images/gym_recoleta.jpg" },
+                new Gym { Name = "Gimnasio Caballito", Neighborhood = "Caballito", Address = "Calle Caballito 707", GImageUrl = "/images/gym_caballito.jpg" },
+                new Gym { Name = "Gimnasio Almagro", Neighborhood = "Almagro", Address = "Avenida Almagro 808", GImageUrl = "/images/gym_almagro.jpg" },
+                new Gym { Name = "Gimnasio Boedo", Neighborhood = "Boedo", Address = "Calle Boedo 909", GImageUrl = "/images/gym_boedo.jpg" },
+                new Gym { Name = "Gimnasio Villa Crespo", Neighborhood = "Villa Crespo", Address = "Avenida Villa Crespo 1010", GImageUrl = "/images/gym_villa_crespo.jpg" },
+                new Gym { Name = "Gimnasio Villa Urquiza", Neighborhood = "Villa Urquiza", Address = "Calle Villa Urquiza 1111", GImageUrl = "/images/gym_villa_urquiza.jpg" },
+                new Gym { Name = "Gimnasio Barracas", Neighborhood = "Barracas", Address = "Avenida Barracas 1212", GImageUrl = "/images/gym_barracas.jpg" },
             };
         }
 
@@ -98,7 +99,8 @@ namespace GymBlog.Controllers
 
         public IActionResult BuscarGym()
         {
-            ViewBag.Gyms = GetGyms();
+            ViewBag.Gyms = GetGyms(); // Asegurarse de inicializar ViewBag.Gyms
+            ViewBag.Gym = null; // Inicializar Gym para evitar null references
             return View();
         }
 
@@ -108,12 +110,8 @@ namespace GymBlog.Controllers
             var gyms = GetGyms();
             var gym = gyms.FirstOrDefault(g => g.Neighborhood == barrio);
 
-            if (gym != null)
-            {
-                ViewBag.Gym = gym;
-            }
-
-            ViewBag.Gyms = gyms;
+            ViewBag.Gym = gym;
+            ViewBag.Gyms = gyms; // Asegurarse de inicializar ViewBag.Gyms
             return View();
         }
     }
