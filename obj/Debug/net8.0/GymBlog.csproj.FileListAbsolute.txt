@@ -89,3 +89,4 @@ C:\Users\48115731\Desktop\GymBlog\obj\Debug\net8.0\refint\GymBlog.dll
 C:\Users\48115731\Desktop\GymBlog\obj\Debug\net8.0\GymBlog.pdb
 C:\Users\48115731\Desktop\GymBlog\obj\Debug\net8.0\GymBlog.genruntimeconfig.cache
 C:\Users\48115731\Desktop\GymBlog\obj\Debug\net8.0\ref\GymBlog.dll
+C:\Users\user\Videos\GymBlog\obj\Debug\net8.0\GymBlog.sourcelink.json

@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/Busca.css" rel="stylesheet">
+</head>
+<body>
 @{
     ViewData["Title"] = "Buscar Gimnasio";
 }
@@ -11,7 +19,7 @@
             <select class="form-control" id="barrio" name="barrio" required>
                 @foreach (var gym in ViewBag.Gyms)
                 {
-                    <option value="@gym.Neighborhood">@gym.Neighborhood</option>
+                    <option value="@gym.Barrio">@gym.Barrio</option>
                 }
             </select>
         </div>
@@ -23,13 +31,15 @@
         var gym = ViewBag.Gym as Gym;
         <div class="col-md-4 mb-4">
             <div class="card gym-card">
-                <img src="@gym.GImageUrl" class="card-img-top gym-img" alt="@gym.Name">
+                <img src="@gym.RutaImagen" class="card-img-top gym-img" alt="@gym.NombreGym">
                 <div class="card-body">
-                    <h5 class="card-title">@gym.Name</h5>
-                    <p class="card-text">@gym.Neighborhood</p>
-                    <p class="card-text"><small class="text-muted">@gym.Address</small></p>
+                    <h5 class="card-title">@gym.NombreGym</h5>
+                    <p class="card-text">@gym.Barrio</p>
+                    <p class="card-text"><small class="text-muted">@gym.Direccion</small></p>
                 </div>
             </div>
         </div>
     }
 </div>
+</body>
+</html>

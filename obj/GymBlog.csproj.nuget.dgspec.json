@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\48115731\\Desktop\\GymBlog\\GymBlog.csproj": {}
+    "C:\\Users\\user\\Videos\\GymBlog\\GymBlog.csproj": {}
   },
   "projects": {
-    "C:\\Users\\48115731\\Desktop\\GymBlog\\GymBlog.csproj": {
+    "C:\\Users\\user\\Videos\\GymBlog\\GymBlog.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\48115731\\Desktop\\GymBlog\\GymBlog.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Videos\\GymBlog\\GymBlog.csproj",
         "projectName": "GymBlog",
-        "projectPath": "C:\\Users\\48115731\\Desktop\\GymBlog\\GymBlog.csproj",
-        "packagesPath": "C:\\Users\\48115731\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\48115731\\Desktop\\GymBlog\\obj\\",
+        "projectPath": "C:\\Users\\user\\Videos\\GymBlog\\GymBlog.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Videos\\GymBlog\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\48115731\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -67,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

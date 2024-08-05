@@ -1,7 +1,95 @@
-
 @{
     ViewData["Title"] = "Mi Primer Día De Gym";
 }
 
-<h1>Mi Primer Día De Gym</h1>
-<p>Descripción y consejos sobre cómo iniciar en el gimnasio...</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">@ViewData["Title"]</h1>
+        <p>Descripción y consejos sobre cómo iniciar en el gimnasio...</p>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Preparación</h2>
+                <p>Antes de ir al gimnasio, asegúrate de tener todo lo necesario: ropa cómoda, una botella de agua, y una toalla. Es importante también llevar un par de zapatillas adecuadas para el ejercicio.</p>
+                <img src="https://example.com/preparacion.jpg" class="img-fluid" alt="Preparación">
+                <p>Además, es recomendable tener un plan de entrenamiento básico. Puedes buscar rutinas en línea o pedirle a un entrenador del gimnasio que te ayude a diseñar una rutina inicial.</p>
+            </div>
+            <div class="col-md-6">
+                <h2>Primeros Ejercicios</h2>
+                <p>Comienza con ejercicios básicos y no te exijas demasiado. Es importante calentar antes de empezar. Un buen calentamiento puede incluir estiramientos y ejercicios cardiovasculares ligeros como caminar o trotar en la cinta.</p>
+                <img src="https://example.com/primeros-ejercicios.jpg" class="img-fluid" alt="Primeros Ejercicios">
+                <p>Algunos ejercicios recomendados para principiantes incluyen:</p>
+                <ul>
+                    <li>Sentadillas</li>
+                    <li>Flexiones</li>
+                    <li>Abdominales</li>
+                    <li>Ejercicios con pesas ligeras</li>
+                </ul>
+                <p>Recuerda que la técnica es más importante que la cantidad de peso que levantas. Asegúrate de realizar cada ejercicio correctamente para evitar lesiones.</p>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h2>Consejos</h2>
+                <ul>
+                    <li>Escucha a tu cuerpo y no te sobreexijas. Es normal sentir un poco de dolor muscular después del primer día, pero no debes sentir dolor agudo.</li>
+                    <li>Consulta con un entrenador si tienes dudas. Los entrenadores pueden ayudarte a mejorar tu técnica y a diseñar un plan de entrenamiento adecuado para tus objetivos.</li>
+                    <li>Hidrátate bien durante toda la sesión. Beber agua es crucial para mantenerte hidratado y para el buen funcionamiento de tus músculos.</li>
+                    <li>Descansa adecuadamente. El descanso es tan importante como el ejercicio. Asegúrate de dormir lo suficiente y de darle a tu cuerpo tiempo para recuperarse.</li>
+                </ul>
+                <img src="https://example.com/consejos.jpg" class="img-fluid" alt="Consejos">
+            </div>
+            <div class="col-md-6">
+                <h2>Conclusión</h2>
+                <p>Tu primer día en el gimnasio puede ser desafiante, pero con la preparación adecuada y una actitud positiva, ¡lo lograrás! No te desanimes si no ves resultados inmediatos. El progreso lleva tiempo y consistencia.</p>
+                <img src="https://example.com/conclusion.jpg" class="img-fluid" alt="Conclusión">
+                <p>Recuerda que cada persona es diferente y progresa a su propio ritmo. Lo más importante es mantener una actitud positiva y disfrutar del proceso.</p>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <h2>Testimonios</h2>
+                <p>Aquí tienes algunos testimonios de personas que también comenzaron su viaje en el gimnasio:</p>
+                <blockquote class="blockquote">
+                    <p class="mb-0">"Mi primer día en el gimnasio fue intimidante, pero con el tiempo me sentí más cómodo y ahora es una parte esencial de mi rutina diaria."</p>
+                    <footer class="blockquote-footer">Juan Pérez</footer>
+                </blockquote>
+                <blockquote class="blockquote">
+                    <p class="mb-0">"No sabía por dónde empezar, pero los entrenadores fueron muy amables y me ayudaron a diseñar un plan de entrenamiento que funcionó para mí."</p>
+                    <footer class="blockquote-footer">María López</footer>
+                </blockquote>
+                <blockquote class="blockquote">
+                    <p class="mb-0">"El gimnasio me ha ayudado no solo a mejorar mi condición física, sino también mi salud mental. Es un gran lugar para liberar el estrés."</p>
+                    <footer class="blockquote-footer">Carlos García</footer>
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <h2>Recursos Adicionales</h2>
+                <p>Si estás buscando más información sobre cómo empezar en el gimnasio, aquí tienes algunos recursos útiles:</p>
+                <ul>
+                    <li><a href="https://example.com/guia-principiantes">Guía para principiantes en el gimnasio</a></li>
+                    <li><a href="https://example.com/rutinas-ejercicio">Rutinas de ejercicio para principiantes</a></li>
+                    <li><a href="https://example.com/nutricion-deportiva">Consejos de nutrición deportiva</a></li>
+                </ul>
+                <img src="https://example.com/recursos.jpg" class="img-fluid" alt="Recursos Adicionales">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

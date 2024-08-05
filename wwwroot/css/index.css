@@ -2,6 +2,8 @@ body {
     font-family: 'Roboto', sans-serif;
     background: url('/images/fondo.jpeg') no-repeat center center fixed;
       background-size: cover;
+      
+      
 }
 
 .navbar {
@@ -10,24 +12,15 @@ body {
     padding: 10px 0;
 }
 
-.nav-link {
-    color: #fff !important;
+h1.display-4{
+    font-weight: bold;
 }
 
-.navbar-brand {
-    color: #fff !important;
-}
-
-.navbar-toggler {
-    border-color: #fff;
-}
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
 
 .blog-card {
     transition: transform 0.3s ease-in-out;
+    width: 60%;
+    margin-left: 20%;
 }
 
 .blog-card:hover {
@@ -35,6 +28,8 @@ body {
 }
 
 .force-calculator {
+    width: 60%;
+    margin-left:20% ;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     padding: 20px;

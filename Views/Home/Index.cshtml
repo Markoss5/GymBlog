@@ -11,16 +11,16 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Bienvenido a Mi Blog de Gimnasio</h1>
+    <h1 class="display-4">GYMBLOG</h1>
 
     <div class="blog-posts">
         @foreach (var post in ViewBag.BlogPosts)
         {
             <div class="card mb-3 blog-card">
-                <img src="@post.ImageUrl" class="card-img-top" alt="@post.Title">
+                <img src="@post.RutaImg" class="card-img-top" alt="@post.Titulo">
                 <div class="card-body">
-                    <h5 class="card-title">@post.Title</h5>
-                    <p class="card-text">@post.Description</p>
+                    <h5 class="card-title">@post.Titulo</h5>
+                    <p class="card-text">@post.Descripcion</p>
                     <a href="@post.Url" class="btn btn-primary">Leer más</a>
                 </div>
             </div>
@@ -31,7 +31,7 @@
         <h2>Calculador de Fuerza</h2>
         <form method="post" action="/Home/CalcularFuerza">
             <div class="form-group">
-                <label for="peso">Peso levantado (kg o lbs):</label>
+                <label for="peso">Peso levantado (en kilos)</label>
                 <input type="number" class="form-control" id="peso" name="peso" required>
             </div>
             <div class="form-group">
@@ -44,7 +44,7 @@
         @if (ViewBag.Resultado != null)
         {
             <div class="mt-3">
-                <h4>Resultado: @ViewBag.Resultado kg/lbs</h4>
+                <h4>Resultado: @ViewBag.Resultado kgs</h4>
             </div>
         }
     </div>
