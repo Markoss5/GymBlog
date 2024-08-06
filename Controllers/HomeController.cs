@@ -56,10 +56,17 @@ namespace GymBlog.Controllers
         [HttpPost]
         public IActionResult BuscarGym(string barrio)
         {
-            var gyms = Gym.GetGyms();
-            var gym = gyms.FirstOrDefault(g => g.Barrio == barrio);
+            List <Gym>gyms = Gym.GetGyms();
+            Gym gym1= null;
+            foreach(Gym g in gyms) //recorro la lista de gyms 
+            {
+                if(g.Barrio == barrio) //Busco al gym que pertenece al barrio pasado por parámetro
+                {
+                    gym1=g;
+                }
+            }
 
-            ViewBag.Gym = gym;
+            ViewBag.Gym = gym1;
             ViewBag.Gyms = gyms;
             return View();
         }

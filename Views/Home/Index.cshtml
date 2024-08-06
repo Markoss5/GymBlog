@@ -29,7 +29,7 @@
 
     <div class="force-calculator mt-5 p-3">
         <h2>Calculador de Fuerza</h2>
-        <form method="post" action="/Home/CalcularFuerza">
+        <form method="post" action="/Home/CalcularFuerza#resultado"> <!-- #resultado es un ancla para que cuando se envie el formulario, que la pÁgina se mantenga en esta seccion -->
             <div class="form-group">
                 <label for="peso">Peso levantado (en kilos)</label>
                 <input type="number" class="form-control" id="peso" name="peso" required>
@@ -41,12 +41,14 @@
             <button type="submit" class="btn btn-primary mt-3">Calcular</button>
         </form>
 
-        @if (ViewBag.Resultado != null)
+        <div id="resultado">
+        @if (ViewBag.Resultado != 0)
         {
             <div class="mt-3">
-                <h4>Resultado: @ViewBag.Resultado kgs</h4>
+                <h4>Resultado: @ViewBag.Resultado kg</h4>
             </div>
         }
+        </div>
     </div>
 </div>
 </body>
